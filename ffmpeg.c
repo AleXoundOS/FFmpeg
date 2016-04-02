@@ -1545,11 +1545,11 @@ static void print_report(int is_last_report, int64_t timer_start, int64_t cur_ti
         if (!ost->stream_copy)
             q = ost->quality / (float) FF_QP2LAMBDA;
 
-        if (vid && enc->codec_type == AVMEDIA_TYPE_VIDEO) {
-            snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf), "q=%2.1f ", q);
-            av_bprintf(&buf_script, "stream_%d_%d_q=%.1f\n",
-                       ost->file_index, ost->index, q);
-        }
+        //if (vid && enc->codec_type == AVMEDIA_TYPE_VIDEO) {
+        //    snprintf(buf + strlen(buf), sizeof(buf) - strlen(buf), "q=%2.1f ", q);
+        //    av_bprintf(&buf_script, "stream_%d_%d_q=%.1f\n",
+        //               ost->file_index, ost->index, q);
+        //}
         if (!vid && enc->codec_type == AVMEDIA_TYPE_VIDEO) {
             float fps;
 
